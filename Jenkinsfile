@@ -11,5 +11,10 @@ pipeline {
         sh './gradlew :consumer:check'
       }
     }
+    stage('publish-pact') {
+      steps {
+        sh './gradlew :consumer:pactPublish'
+      }
+    }
   }
 }
