@@ -30,7 +30,6 @@ pipeline {
     stage('can-i-deploy') {
       steps {
         sh 'curl -LO https://github.com/pact-foundation/pact-ruby-standalone/releases/download/v1.69.0/pact-1.69.0-osx.tar.gz'
-        sleep(time: 20, unit: 'SECONDS')
         sh 'tar xzf pact-1.69.0-osx.tar.gz'
         sh 'cd pact/bin'
         sh 'ls'
