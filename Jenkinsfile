@@ -18,7 +18,7 @@ pipeline {
     }
     stage('deploy') {
       steps {
-        sh 'echo "deploying on server"'
+        sh ' ./gradlew :providers:dropwizard-provider:test'
       }
     }
   }
