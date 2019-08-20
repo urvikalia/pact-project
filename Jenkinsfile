@@ -18,7 +18,7 @@ pipeline {
     }
     stage('deploy') {
       steps {
-        sh ' ./gradlew :providers:dropwizard-provider:test'
+        sh './gradlew :providers:dropwizard-provider:test'
       }
     }
   }
