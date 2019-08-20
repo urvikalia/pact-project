@@ -21,9 +21,9 @@ pipeline {
         sh './gradlew :providers:dropwizard-provider:test'
       }
     }
-    stage('dummy-deploy') {
+    stage('can-i-deploy') {
       steps {
-        sh 'echo "provider deployed "'
+        sh 'pact-broker can-i-deploy -a "Our Consumer" -b http://localhost:9292 --latest'
       }
     }
   }
