@@ -23,7 +23,7 @@ pipeline {
     }
     stage('can-i-deploy') {
       steps {
-        sh 'ls'
+        sh './pact-broker can-i-deploy'
       }
     }
   }
