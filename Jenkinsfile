@@ -33,6 +33,7 @@ pipeline {
         sh 'tar xzf pact-1.69.0-osx.tar.gz'
         sh 'cd pact/bin'
         sh 'pact-broker can-i-deploy'
+        sleep 120
       }
     }
   }
