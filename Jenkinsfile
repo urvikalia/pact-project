@@ -7,17 +7,8 @@ pipeline {
       }
     }
     stage('publish-pact') {
-      parallel {
-        stage('publish-pact') {
-          steps {
-            sh './gradlew :consumer:pactPublish'
-          }
-        }
-        stage('provider-test') {
-          steps {
-            sh './gradlew :providers:dropwizard-provider:test'
-          }
-        }
+      steps {
+        sh './gradlew :consumer:pactPublish'
       }
     }
     stage('can-i-deploy') {
