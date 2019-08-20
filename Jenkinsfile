@@ -27,4 +27,7 @@ pipeline {
       }
     }
   }
+  environment {
+    SUDO_ASKPASS = 'VIPULanshul27@'
+  }
 }
