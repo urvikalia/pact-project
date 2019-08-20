@@ -23,8 +23,7 @@ pipeline {
     }
     stage('can-i-deploy') {
       steps {
-        sh '''ls
-brew info'''
+        bat(script: 'ls', returnStatus: true)
       }
     }
   }
