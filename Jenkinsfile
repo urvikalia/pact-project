@@ -16,5 +16,10 @@ pipeline {
         sh './gradlew :consumer:pactPublish'
       }
     }
+    stage('provider-verify') {
+      steps {
+        sh './gradlew :providers:dropwizard-provider:test'
+      }
+    }
   }
 }
