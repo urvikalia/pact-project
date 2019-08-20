@@ -24,7 +24,7 @@ pipeline {
     stage('pre-config') {
       steps {
         sh 'echo \'VIPULanshul27@\' | sudo -S gem install pact_broker-client'
-        sh 'pact-broker can-i-deploy -a "Our Consumer" -b http://localhost:9292 --latest'
+        sh 'pact-broker can-i-deploy'
       }
     }
   }
