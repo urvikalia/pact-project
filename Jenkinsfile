@@ -21,5 +21,10 @@ pipeline {
         sh './gradlew :providers:dropwizard-provider:test'
       }
     }
+    stage('dummy-deploy') {
+      steps {
+        sh 'echo "provider deployed "'
+      }
+    }
   }
 }
