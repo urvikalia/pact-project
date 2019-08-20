@@ -34,7 +34,7 @@ test {
 task startScript() {
   doLast {
     exec {
-      executable "./can-deploy.sh"
+      executable "./can-deploy"
     }
   }
 }
