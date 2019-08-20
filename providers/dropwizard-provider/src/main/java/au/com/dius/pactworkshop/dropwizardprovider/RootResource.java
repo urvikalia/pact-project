@@ -23,11 +23,12 @@ public class RootResource {
     if (validDate.isPresent()) {
       if (DataStore.INSTANCE.getDataCount() > 0) {
         try {
+          
           LocalDateTime validTime = LocalDateTime.parse(validDate.get());
           Map<String, Serializable> result = new HashMap<>(3);
           result.put("test", "NO");
           result.put("validDate", OffsetDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssXXX")));
-          result.put("count", DataStore.INSTANCE.getDataCount());
+          result.put("counter", DataStore.INSTANCE.getDataCount());
           return result;
         } catch (DateTimeParseException e) {
           throw new InvalidQueryParameterException("'" + validDate.get() + "' is not a date", e);
