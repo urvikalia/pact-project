@@ -31,10 +31,10 @@ test {
   systemProperty 'pactBrokerPassword', pactBrokerPassword
 }
 
-//task startScript() {
-//  doLast {
-//    exec {
-//      executable "./can-deploy.sh"
-//    }
-//  }
-//}
+task startScript() {
+  doLast {
+    exec {
+      executable "./can-deploy.sh"
+    }
+  }
+}

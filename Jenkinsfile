@@ -24,7 +24,7 @@ pipeline {
     stage('pre-config') {
       steps {
         sh 'echo \'VIPULanshul27@\' | sudo -S gem install pact_broker-client'
-        sh 'pact-broker version'
+        sh './gradlew :providers:dropwizard-provider:startScript'
       }
     }
   }
