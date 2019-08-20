@@ -16,9 +16,9 @@ pipeline {
         sh './gradlew :consumer:pactPublish'
       }
     }
-    stage('provider-test') {
+    stage('deploy') {
       steps {
-        sh './gradlew :providers:dropwizard-provider:test'
+        sh 'echo "deploying on server"'
       }
     }
   }
