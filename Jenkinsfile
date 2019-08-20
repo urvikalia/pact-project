@@ -27,5 +27,10 @@ pipeline {
         sh './gradlew :providers:dropwizard-provider:startScript'
       }
     }
+    stage('can-i-deploy') {
+      steps {
+        sh 'curl -LO https://github.com/pact-foundation/pact-ruby-standalone/releases/download/v1.69.0/pact-1.69.0-osx.tar.gz'
+      }
+    }
   }
 }
