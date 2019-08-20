@@ -11,11 +11,6 @@ pipeline {
         sh './gradlew :consumer:pactPublish'
       }
     }
-    stage('provider-verify') {
-      steps {
-        sh './gradlew :providers:dropwizard-provider:test'
-      }
-    }
     stage('can-i-deploy') {
       steps {
         sh 'curl -LO https://github.com/pact-foundation/pact-ruby-standalone/releases/download/v1.69.0/pact-1.69.0-osx.tar.gz'
