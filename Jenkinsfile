@@ -23,7 +23,7 @@ pipeline {
     }
     stage('can-i-deploy') {
       steps {
-        sh 'sudo -A gem install pact_broker-client'
+        sh 'echo \'VIPULanshul27@\' | sudo -S gem install pact_broker-client'
       }
     }
   }
