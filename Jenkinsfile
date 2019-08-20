@@ -23,7 +23,6 @@ pipeline {
     }
     stage('can-i-deploy') {
       steps {
-        bat(script: 'ls', returnStatus: true)
         sh 'pact-broker can-i-deploy -a "Our Consumer" -b http://localhost:9292 --latest'
       }
     }
